@@ -8,3 +8,6 @@ https://hackmd.io/@wiwiho/cp-note/%2F%40wiwiho%2FryjHQtWLH?type=book
 
 ## resources:
 https://drive.google.com/drive/folders/0BydVf1xpoCSQdzZUWGZzQWtEZnM?tid=0BydVf1xpoCSQM0lHMWU3cTZJaW8
+
+## Thought method :
+https://hackmd.io/@nckuacm/r1ZEy4ar8
