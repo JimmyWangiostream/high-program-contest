@@ -14,7 +14,7 @@ int longestPrefixSuffix(string s)
 { 
     int n = s.length(); 
   
-    int lps[n]; 
+    int lps[n]; //lps[i]代表s[0]到s[i]的longest共同suf pre的長度
     lps[0] = 0; // lps[0] is always 0 
 
     int len = 0; 
