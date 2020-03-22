@@ -1,1 +1,43 @@
+class Solution {
+    vector<pair<int,int>>v;
+public:
+    int maxNumberOfFamilies(int n, vector<vector<int>>& reservedSeats) {
+    int no=0;
 
+    v.clear();
+
+    for(int i=0;i<reservedSeats.size();i++)
+
+    {
+            v.push_back(make_pair(reservedSeats[i][0],reservedSeats[i][1]));
+
+    }
+    sort(v.begin(),v.end());
+    for(int i=0;i<v.size();i++)
+    {
+        int d=v[i].first,f=0,g=0,h=0,k=0;
+        while(d==v[i].first)   //iterating in a row
+        {
+            if(v[i].second==2||v[i].second==3)
+                f=1;
+            if(v[i].second==4||v[i].second==5)
+                g=1;
+            if(v[i].second==6||v[i].second==7)
+                h=1;
+            if(v[i].second==8||v[i].second==9)
+                k=1;
+            i++;
+            if(i>=v.size())
+                break;
+        }
+        i--;  
+        if(f==1||g==1) // first set
+            no++;
+        if(h==1||k==1) // second set
+            no++;
+        if(g==0&&h==0&&f==1&&k==1) // edge case
+            no--;
+    }
+    return n*2-no;
+}
+};
