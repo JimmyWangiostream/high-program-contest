@@ -54,3 +54,13 @@ int main()
     cout << longestPrefixSuffix(s); 
     return 0; 
 } 
+
+//
+/* random lower bound search*/
+while (l != r) {
+  int m = l + rand()%(r-l); // 切成兩份
+  if (A[m] >= target) r = m;
+  else l = m + 1;
+}
+
+return l;
